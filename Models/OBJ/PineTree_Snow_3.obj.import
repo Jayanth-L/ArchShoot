@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/PineTree_Snow_3.obj-312518920863f711bea267bafbf35b12.mesh"
+
+[deps]
+
+files=[ "res://.import/PineTree_Snow_3.obj-312518920863f711bea267bafbf35b12.mesh" ]
+
+source_file="res://Models/OBJ/PineTree_Snow_3.obj"
+dest_files=[ "res://.import/PineTree_Snow_3.obj-312518920863f711bea267bafbf35b12.mesh", "res://.import/PineTree_Snow_3.obj-312518920863f711bea267bafbf35b12.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

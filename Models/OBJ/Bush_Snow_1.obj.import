@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Bush_Snow_1.obj-d7de4774a44d8d34dba1c296186ef9dc.mesh"
+
+[deps]
+
+files=[ "res://.import/Bush_Snow_1.obj-d7de4774a44d8d34dba1c296186ef9dc.mesh" ]
+
+source_file="res://Models/OBJ/Bush_Snow_1.obj"
+dest_files=[ "res://.import/Bush_Snow_1.obj-d7de4774a44d8d34dba1c296186ef9dc.mesh", "res://.import/Bush_Snow_1.obj-d7de4774a44d8d34dba1c296186ef9dc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

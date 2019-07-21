@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Rock_Moss_4.obj-c4dde455d9257ed899b94ac018e38efc.mesh"
+
+[deps]
+
+files=[ "res://.import/Rock_Moss_4.obj-c4dde455d9257ed899b94ac018e38efc.mesh" ]
+
+source_file="res://Models/OBJ/Rock_Moss_4.obj"
+dest_files=[ "res://.import/Rock_Moss_4.obj-c4dde455d9257ed899b94ac018e38efc.mesh", "res://.import/Rock_Moss_4.obj-c4dde455d9257ed899b94ac018e38efc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

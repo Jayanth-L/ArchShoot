@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Corn_2.obj-322b44d28972d735f830b100d58e4738.mesh"
+
+[deps]
+
+files=[ "res://.import/Corn_2.obj-322b44d28972d735f830b100d58e4738.mesh" ]
+
+source_file="res://Models/OBJ/Corn_2.obj"
+dest_files=[ "res://.import/Corn_2.obj-322b44d28972d735f830b100d58e4738.mesh", "res://.import/Corn_2.obj-322b44d28972d735f830b100d58e4738.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

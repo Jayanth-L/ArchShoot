@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CommonTree_Dead_4.obj-b88911cb7776ee066192babfc329e38a.mesh"
+
+[deps]
+
+files=[ "res://.import/CommonTree_Dead_4.obj-b88911cb7776ee066192babfc329e38a.mesh" ]
+
+source_file="res://Models/OBJ/CommonTree_Dead_4.obj"
+dest_files=[ "res://.import/CommonTree_Dead_4.obj-b88911cb7776ee066192babfc329e38a.mesh", "res://.import/CommonTree_Dead_4.obj-b88911cb7776ee066192babfc329e38a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

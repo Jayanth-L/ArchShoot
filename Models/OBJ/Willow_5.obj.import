@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Willow_5.obj-5e6a3e4ad36f411ca441b6aa8574225f.mesh"
+
+[deps]
+
+files=[ "res://.import/Willow_5.obj-5e6a3e4ad36f411ca441b6aa8574225f.mesh" ]
+
+source_file="res://Models/OBJ/Willow_5.obj"
+dest_files=[ "res://.import/Willow_5.obj-5e6a3e4ad36f411ca441b6aa8574225f.mesh", "res://.import/Willow_5.obj-5e6a3e4ad36f411ca441b6aa8574225f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

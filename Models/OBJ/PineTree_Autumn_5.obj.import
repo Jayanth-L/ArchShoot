@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/PineTree_Autumn_5.obj-e8d62934dd179503f954bbb3dce8b48d.mesh"
+
+[deps]
+
+files=[ "res://.import/PineTree_Autumn_5.obj-e8d62934dd179503f954bbb3dce8b48d.mesh" ]
+
+source_file="res://Models/OBJ/PineTree_Autumn_5.obj"
+dest_files=[ "res://.import/PineTree_Autumn_5.obj-e8d62934dd179503f954bbb3dce8b48d.mesh", "res://.import/PineTree_Autumn_5.obj-e8d62934dd179503f954bbb3dce8b48d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

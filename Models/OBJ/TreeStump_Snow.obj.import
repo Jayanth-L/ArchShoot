@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/TreeStump_Snow.obj-4c7ab7bce2dab6c36a890d72d0f45f2a.mesh"
+
+[deps]
+
+files=[ "res://.import/TreeStump_Snow.obj-4c7ab7bce2dab6c36a890d72d0f45f2a.mesh" ]
+
+source_file="res://Models/OBJ/TreeStump_Snow.obj"
+dest_files=[ "res://.import/TreeStump_Snow.obj-4c7ab7bce2dab6c36a890d72d0f45f2a.mesh", "res://.import/TreeStump_Snow.obj-4c7ab7bce2dab6c36a890d72d0f45f2a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

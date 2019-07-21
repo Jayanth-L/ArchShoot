@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/BushBerries_2.obj-48a8eb9dd429f5083147f1f16f7615d2.mesh"
+
+[deps]
+
+files=[ "res://.import/BushBerries_2.obj-48a8eb9dd429f5083147f1f16f7615d2.mesh" ]
+
+source_file="res://Models/OBJ/BushBerries_2.obj"
+dest_files=[ "res://.import/BushBerries_2.obj-48a8eb9dd429f5083147f1f16f7615d2.mesh", "res://.import/BushBerries_2.obj-48a8eb9dd429f5083147f1f16f7615d2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

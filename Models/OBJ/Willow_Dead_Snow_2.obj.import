@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Willow_Dead_Snow_2.obj-744fb6173857f44ca4e83b05f5b97e7b.mesh"
+
+[deps]
+
+files=[ "res://.import/Willow_Dead_Snow_2.obj-744fb6173857f44ca4e83b05f5b97e7b.mesh" ]
+
+source_file="res://Models/OBJ/Willow_Dead_Snow_2.obj"
+dest_files=[ "res://.import/Willow_Dead_Snow_2.obj-744fb6173857f44ca4e83b05f5b97e7b.mesh", "res://.import/Willow_Dead_Snow_2.obj-744fb6173857f44ca4e83b05f5b97e7b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
