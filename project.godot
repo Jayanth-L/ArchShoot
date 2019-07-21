@@ -19,8 +19,11 @@ config/name="Arch Shoot"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"

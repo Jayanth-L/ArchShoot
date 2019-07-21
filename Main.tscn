@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Models/OBJ/PineTree_1.obj" type="ArrayMesh" id=2]
@@ -23,12 +23,44 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( -90, 0, 15 ) ]
 }
 
-[sub_resource type="CubeMesh" id=3]
+[sub_resource type="Animation" id=3]
+resource_name = "FallTree2"
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="Animation" id=4]
+resource_name = "FallTree3"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -90, 0, 45 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("PineTree_1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -90, 0, 15 ) ]
+}
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.0117647, 0.054902, 0.0235294, 1 )
 
-[sub_resource type="ConcavePolygonShape" id=5]
+[sub_resource type="ConcavePolygonShape" id=8]
 data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
 
 [node name="Main" type="Spatial"]
@@ -39,9 +71,8 @@ transform = Transform( 0.976653, -0.18887, 0.102357, 0.126346, 0.890366, 0.43736
 light_energy = 9.08
 
 [node name="PineTree" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0692692, 1.1942, -1.47782 )
-continuous_cd = true
-contacts_reported = 2
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50784, 1.1942, -1.47782 )
+contacts_reported = 30
 contact_monitor = true
 
 [node name="PineTree_1" type="MeshInstance" parent="PineTree"]
@@ -54,31 +85,52 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PineTree"]
 anims/FallTree = SubResource( 2 )
+anims/FallTree2 = SubResource( 3 )
+anims/FallTree3 = SubResource( 4 )
+
+[node name="PineTree2" type="RigidBody" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.295, 1.1942, -1.47782 )
+continuous_cd = true
+contacts_reported = 2
+contact_monitor = true
+
+[node name="PineTree_1" type="MeshInstance" parent="PineTree2"]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="PineTree2"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PineTree2"]
+anims/FallTree = SubResource( 5 )
 
 [node name="Camera" type="Camera" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92137, 4.97044 )
 script = ExtResource( 3 )
 
 [node name="Bow_Wooden" type="MeshInstance" parent="Camera"]
-transform = Transform( -4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.147068, 0, -0.304135 )
+transform = Transform( -4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.0206651, 0, -0.304135 )
 mesh = ExtResource( 4 )
 material/0 = null
 material/1 = null
 material/2 = null
 
 [node name="SpawnPosition" type="Position3D" parent="Camera"]
-transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.142919, -0.0169888, -0.193474 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.0165161, -0.0169888, -0.193474 )
 
 [node name="Floor" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
+transform = Transform( 50, 0, 0, 0, 0.1, 0, 0, 0, 50, 0, 0, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.000773239 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 4 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 [connection signal="body_entered" from="PineTree" to="." method="_on_PineTree_body_entered"]
 [connection signal="body_shape_entered" from="PineTree" to="." method="_on_PineTree_body_shape_entered"]
+[connection signal="body_entered" from="PineTree2" to="." method="_on_PineTree_body_entered"]
+[connection signal="body_shape_entered" from="PineTree2" to="." method="_on_PineTree_body_shape_entered"]
