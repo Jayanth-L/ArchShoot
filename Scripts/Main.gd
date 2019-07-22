@@ -7,7 +7,7 @@ var arrow = preload("res://ModelScenes/Arrow.tscn")
 func _ready():
 	instance = arrow.instance()
 	instance.connect("fall_tree", self, "respawn_arrow")
-	$Camera/SpawnPosition.add_child(instance)
+	$Player/SpawnPosition.add_child(instance)
 
 
 func _on_PineTree_body_shape_entered(body_id, body, body_shape, local_shape):
@@ -20,4 +20,4 @@ func _on_PineTree_body_shape_entered(body_id, body, body_shape, local_shape):
 func respawn_arrow():
 	instance = arrow.instance()
 	instance.connect("fall_tree", self, "respawn_arrow")
-	$Camera/SpawnPosition.add_child(instance)
+	$Player/SpawnPosition.add_child(instance)
