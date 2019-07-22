@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var camera_angle = 0
-var mouse_sensitivity = 0.2
+var mouse_sensitivity = 0.4
 var camera_change = Vector2()
 
 var velocity = Vector3()
@@ -31,18 +31,24 @@ const MAX_SLOPE_ANGLE = 35
 const MAX_STAIR_SLOPE = 20
 const STAIR_JUMP_HEIGHT = 6
 
+var direction_vector
+
 const VELOCITY_RATIO = 50
 func _process(delta):
 	aim()
 	
 	if Input.is_action_pressed("ui_up"):
-		move_and_collide(-transform.basis.z.normalized() / VELOCITY_RATIO)
+		direction_vector = transform.basis.z.normalized() / VELOCITY_RATIO
+		move_and_collide(-Vector3(direction_vector.x, 0, direction_vector.z))
 	if Input.is_action_pressed("ui_down"):
-		move_and_collide(transform.basis.z.normalized() / VELOCITY_RATIO)
+		direction_vector = transform.basis.z.normalized() / VELOCITY_RATIO
+		move_and_collide(Vector3(direction_vector.x, 0, direction_vector.z))
 	if Input.is_action_pressed("ui_right"):
-		move_and_collide(transform.basis.x.normalized() / VELOCITY_RATIO)
+		direction_vector = transform.basis.x.normalized() / VELOCITY_RATIO
+		move_and_collide(Vector3(direction_vector.x, 0, direction_vector.z))
 	if Input.is_action_pressed("ui_left"):
-		move_and_collide(-transform.basis.x.normalized() / VELOCITY_RATIO)
+		direction_vector = transform.basis.x.normalized() / VELOCITY_RATIO
+		move_and_collide(-Vector3(direction_vector.x, 0, direction_vector.z))
 
 func _input(event):
 	if event is InputEventMouseMotion:
